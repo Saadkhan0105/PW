@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .side_navigation_item {
+    @apply flex lg:p-[7px] px-1 py-3 lg:gap-4 gap-2 w-full rounded-md cursor-pointer lg:text-[13px] flex-shrink-0  text-[10px] flex-col lg:flex-row items-center truncate  transition-colors duration-500  hover:bg-bgh1;
+  }
+  .tag {
+    @apply px-4 py-1.5 text-sm font-semibold min-w-max transition-colors duration-500 rounded-md cursor-pointer w-max bg-bgh1 hover:bg-bgb1;
+  }
+}
