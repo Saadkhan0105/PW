@@ -1,0 +1,17 @@
+Question 5: Explain the importance of comments in JavaScript and provide examples of single-line and
+multi-line comments.
+
+Answer:
+
+Comments in JavaScript serve to document code, making it more readable and understandable. They explain the purpose of code segments, aiding developers and collaborators.
+Example and syntax:
+// Single-line comment
+let total = calculateTotal(); // Calculate and store total value
+/*
+  Multi-line comment
+  This section of code performs a specific function.
+  It includes multiple lines of explanation.
+*/
+function complexFunction() {
+  // code implementation
+}
