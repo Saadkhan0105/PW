@@ -1,0 +1,64 @@
+The 'XMLHttpRequest' object is a built-in browser object that allows for making HTTP requests to servers from JavaScript. It plays a crucial role in AJAX (Asynchronous JavaScript and XML), enabling web pages to be updated asynchronously by exchanging data with a web server behind the scenes. This means that a web page can update just parts of the page without reloading the whole page.
+
+Defining 'XMLHttpRequest':
+To use the XMLHttpRequest object, you need to create an instance of it:
+const xhr = new XMLHttpRequest();
+
+Using XMLHttpRequest in AJAX
+Here’s a step-by-step guide on how to use XMLHttpRequest to make an AJAX request:
+
+1. Create an XMLHttpRequest Object:
+const xhr = new XMLHttpRequest();
+
+2. Define a Callback Function:
+The callback function will handle the response from the server.
+You define it by setting the 'onreadystatechange' property.
+
+xhr.onreadystatechange = function() {
+    if (xhr.readyState === XMLHttpRequest.DONE) { // XMLHttpRequest.DONE == 4
+        if (xhr.status === 200) {
+            // Handle the response
+            console.log(xhr.responseText);
+        } else {
+            console.error('There was a problem with the request.');
+        }
+    }
+};
+
+3. Open a Request:
+Use the open method to specify the type of request (GET or POST), the URL, and whether the request should be asynchronous (true for asynchronous).
+
+xhr.open('GET', 'https://api.example.com/data', true);
+
+4. Send the Request:
+
+Use the send method to send the request to the server. If you are using a POST request, you can pass data as an argument to send.
+
+xhr.send();
+
+Example of an AJAX Request
+Here’s a complete example of making an AJAX GET request to fetch data from a server:
+
+// Create a new XMLHttpRequest object
+const xhr = new XMLHttpRequest();
+
+// Define a callback function
+xhr.onreadystatechange = function() {
+    if (xhr.readyState === XMLHttpRequest.DONE) {
+        if (xhr.status === 200) {
+            // Handle the response
+            console.log("Response received: ", xhr.responseText);
+            // Optionally parse the response if it's JSON
+            const data = JSON.parse(xhr.responseText);
+            console.log(data);
+        } else {
+            console.error('There was a problem with the request.');
+        }
+    }
+};
+
+// Open a request
+xhr.open('GET', 'https://jsonplaceholder.typicode.com/posts', true);
+
+// Send the request
+xhr.send();
