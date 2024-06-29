@@ -1,0 +1,3 @@
+Question 1: Explain what JavaScript is and its role in web development.
+Answer:
+JavaScript is a scripting language that is crucial  for web development. It enables dynamic content, interactivity, and behavior on websites, enhancing the user experience by allowing manipulation of webpage elements in real-time.
