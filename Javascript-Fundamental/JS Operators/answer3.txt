@@ -1,0 +1,23 @@
+Q3. Differentiate between unary, binary, and ternary operators in JavaScript. Give examples of each.
+
+Answer:
+
+Unary Operators:
+Operate on a single operand.
+Example:
+let x = 5;
+let y = -x; // Unary negation
+
+
+Binary Operators:
+Operate on two operands.
+Example:
+let a = 10;
+let b = 20;
+let sum = a + b; // Binary addition
+
+
+Ternary (Conditional) Operator:
+Takes three operands and is a shorthand for an if-else statement.
+Example:
+let isEven = (num % 2 === 0) ? "Even" : "Odd";
