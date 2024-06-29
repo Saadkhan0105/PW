@@ -1,0 +1,29 @@
+Question 2: Describe the categorization of operators in JavaScript based on their functionality. Provide examples for
+each category.
+Answer:
+Operators in JavaScript can be categorized based on their functionality into several types:
+
+1- Arithmetic Operators: Perform arithmetic calculations.
+Example let result = 10 + 5; // Addition
+
+2-Assignment Operators: Assign values to variables.
+Example:
+let x = 10; // Assigning 10 to variable x
+
+3- Comparison Operators: Compare values and return a Boolean result.
+Example:
+let isEqual = (x === 10); // Equality check
+
+4-Logical Operators:
+Perform logical operations and return Boolean values.
+Example:
+let andResult = (true && false); // Logical AND
+
+5- Ternary (Conditional) Operator:
+A shorthand for an if-else statement.
+Example: let status = (isOnline) ? "Online" : "Offline";
+
+6: Bitwise Operators:
+Perform bitwise operations on binary representations of numbers.
+Example:
+let bitwiseResult = 5 & 3; // Bitwise AND
