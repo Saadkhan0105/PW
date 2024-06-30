@@ -1,0 +1,89 @@
+Promises are a modern JavaScript feature that provide a more powerful and flexible way to handle asynchronous operations compared to traditional callbacks. Here's a comparison between Promises and callbacks, along with reasons why Promises are generally preferred.
+
+Callbacks
+Definition: A callback is a function passed into another function as an argument, which is then invoked inside the outer function to complete some kind of routine or action.
+
+Usage Example:
+
+function getData(callback) {
+    setTimeout(() => {
+        const data = "Some data";
+        callback(data);
+    }, 1000);
+}
+
+getData((data) => {
+    console.log(data);
+});
+
+Advantages:
+
+Simple: Easy to understand and use for simple cases.
+Control: Offers fine-grained control over when and how the callback is executed.
+Disadvantages:
+
+Callback Hell: Nesting multiple callbacks can lead to deeply nested structures, making the code hard to read and maintain.
+
+getData((data1) => {
+    processData(data1, (data2) => {
+        saveData(data2, (data3) => {
+            console.log(data3);
+        });
+    });
+});
+
+Error Handling: Managing errors across multiple callbacks can be complex and error-prone.
+Inversion of Control: The calling function loses control over the execution flow, which is transferred to the callback.
+Promises
+Definition: A Promise is an object representing the eventual completion or failure of an asynchronous operation.
+
+Usage Example:
+
+function getData() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            const data = "Some data";
+            resolve(data);
+        }, 1000);
+    });
+}
+
+getData().then((data) => {
+    console.log(data);
+}).catch((error) => {
+    console.error(error);
+});
+
+Advantages:
+
+Chaining: Promises allow for chaining .then() calls, making the code more readable and maintaining a flat structure.
+getData()
+    .then((data1) => processData(data1))
+    .then((data2) => saveData(data2))
+    .then((data3) => console.log(data3))
+    .catch((error) => console.error(error));
+
+Error Handling: Promises provide a unified way to handle errors using .catch(), simplifying error management.
+Composability: Promises can be combined using Promise.all(), Promise.race(), etc., enabling complex asynchronous flows.
+Control: Promises provide better control over the asynchronous flow, allowing for easier debugging and reasoning about code.
+
+Why Promises are Preferred
+Maintainability: Promises avoid the deeply nested callback structures, making the code easier to read and maintain.
+Error Handling: Promises provide a consistent way to handle errors, reducing the risk of unhandled exceptions and improving robustness.
+Composition: Promises enable easy composition of multiple asynchronous operations, facilitating complex workflows.
+Modern Syntax: With the introduction of async/await in ES2017, working with Promises has become even more intuitive, providing a synchronous-like experience for asynchronous code.
+
+async function asyncFunction() {
+    try {
+        const data1 = await getData();
+        const data2 = await processData(data1);
+        const data3 = await saveData(data2);
+        console.log(data3);
+    } catch (error) {
+        console.error(error);
+    }
+}
+
+asyncFunction();
+
+In summary, Promises are preferred for managing asynchronous code due to their improved readability, better error handling, ease of composition, and support for modern syntax like async/await.
