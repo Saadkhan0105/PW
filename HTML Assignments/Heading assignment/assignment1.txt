@@ -1,0 +1,71 @@
+Question no.2) Explain the purpose of comments in HTML and provide an example of how to use comments in an HTML
+documents?
+Solution: Comments in HTML serve the purpose of providing human-readable notes or explanations within the 
+HTML code. They are not displayed on the web page when it's rendered in a browser but are meant for 
+developers, designers, or anyone working on the code to understand it better. Comments can be useful 
+for documenting code, explaining the purpose of specific elements or sections, or temporarily disabling
+ a portion of code for testing or debugging.In HTML, comments are created using the <!-- and --> delimiters.
+  Anything between these delimiters will be treated as a comment and ignored by the web browser.
+  Example:
+  <!DOCTYPE html>
+<html>
+<head>
+    <title>Comments Tag</title>
+</head>
+<body>
+    <h1>Lets learn about Comments Tag</h1>
+    <p>This is a paragraph of text.</p>
+
+    <!-- This is a Single Line comment -->
+    <p>Another paragraph of text.</p>
+
+    <!--
+    This is a Multi-line comment.
+    It can span multiple lines.
+    -->
+
+    <p>Final paragraph of text.</p>
+</body>
+</html>
+
+
+Question no.4) Write a short note on Tag and element with an example
+Solution: In HTML (Hypertext Markup Language), tags are used to define elements on a web page, while 
+attributes provide additional information or properties for these elements. 
+Tags are enclosed in angle brackets < >, and attributes are typically specified within the opening tag.
+Example:
+Let's consider the <a> tag, which is commonly used to create hyperlinks. 
+It has an attribute called href (short for "hypertext reference") that specifies the URL the link
+should point to.
+Example: <a href="https://pwskills.com/">Visit PW Skills</a>
+
+
+Question no.5) What is the DOCTYPE Declaration in HTML?
+Solution: The DOCTYPE Declaration in HTML (Document Type Declaration) is a special declaration that is
+placed at the very beginning of an HTML document to specify which version of HTML or which document 
+type definition (DTD) the document adheres to. It helps web browsers and validators understand how to 
+interpret and render the HTML content correctly.
+The DOCTYPE Declaration is not an HTML tag; it's an instruction to the browser and does not have a closing tag. It typically looks like this:
+<!DOCTYPE html>
+In this example, <!DOCTYPE html> is specifying that the HTML document adheres to the HTML5 standard, which is the latest and most commonly used version of HTML as of my knowledge cutoff date in September 2021. HTML5 introduced many new features and elements for building modern web pages.
+
+The DOCTYPE Declaration serves several important purposes:
+
+1. Version Specification: It informs the browser about the version of HTML being used, allowing the browser
+to render the document accordingly. Different versions of HTML may have different rules and behaviors.
+
+2. Quirks Mode vs. Standards Mode: The DOCTYPE Declaration helps the browser determine whether to render 
+the page in "quirks mode" (for older, non-standard documents) or "standards mode"
+(for documents that adhere to modern HTML standards). This ensures consistent rendering across 
+different browsers.
+
+3. Validation: It helps in validating the HTML document against the specified standard, which can be 
+useful for catching errors and ensuring compliance with best practices.
+
+4. Future Compatibility: It provides a level of forward compatibility by signaling to the browser 
+that the document should be rendered in a more modern way, even if new HTML features are introduced in 
+the future.
+
+In summary, the DOCTYPE Declaration is a crucial part of an HTML document that defines the document's type and version, ensuring that web browsers interpret and display the content correctly and consistently.
+
+

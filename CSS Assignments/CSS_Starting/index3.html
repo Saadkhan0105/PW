@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Page with CSS Examples</title>
+
+    <!-- Internal CSS -->
+    <style>
+        /* Internal CSS for the body element */
+        body {
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Internal CSS for the div elements with the class "box" */
+        .box {
+            width: 200px;
+            height: 100px;
+            background-color: #3498db;
+            color: #fff;
+            text-align: center;
+            margin: 10px;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Inline CSS for the first div element -->
+    <div style="background-color: #e74c3c; color: #fff; text-align: center; margin: 10px; padding: 10px;">
+        This div uses inline CSS.
+    </div>
+
+    <!-- Internal CSS is applied to this div -->
+    <div class="box">
+        This div uses internal CSS.
+    </div>
+
+    <!-- External CSS -->
+    <div class="box">
+        This div uses external CSS.
+    </div>
+
+    <!-- External CSS file linked -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+</body>
+</html>

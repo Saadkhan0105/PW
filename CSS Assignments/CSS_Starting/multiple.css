@@ -1,0 +1,21 @@
+/* Styling for the block-level element */
+.paragraph {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+/* Styling for an important paragraph (modifier) */
+.paragraph--important {
+    font-weight: bold;
+    color: red;
+}
+
+/* Styling for the note within a paragraph (element) */
+.paragraph__note {
+    font-style: italic;
+}
+
+/* Styling for a highlighted note within a paragraph (modifier) */
+.paragraph__note--highlighted {
+    background-color: yellow;
+}

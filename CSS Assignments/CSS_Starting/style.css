@@ -1,0 +1,14 @@
+body {
+    background-color: #ecf0f1;
+    font-family: Helvetica, sans-serif;
+}
+
+/* External CSS for the div elements with the class "box" */
+.box {
+    border: 2px solid #2ecc71;
+    background-color: #27ae60;
+    color: #fff;
+    text-align: center;
+    margin: 20px;
+    padding: 20px;
+}
